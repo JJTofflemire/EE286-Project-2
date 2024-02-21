@@ -1,1 +1,1 @@
-# EE286-Project-2
+# Giggle Goblins Go (fnoof edition)
