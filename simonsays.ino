@@ -717,10 +717,10 @@ void setup() {
 			// Classic
 			gamemode = 0;
 			while(digitalRead(Y_button) == LOW){
-				// This would check if Y_button and R_button are pressed at the same time I think
-				// if(R_button == LOW){
-					//    easter_egg_check = true;
-				//    }
+				// Easter egg check, if Y is held and then R is pressed, the easter egg is enabled
+				if(digitalRead(R_button) == LOW){
+				  easter_egg_check = true;
+				}
 			}
 			reset();
 			digitalWrite(Y_led, HIGH);
@@ -836,9 +836,18 @@ void freddy() {
 	tone(buzzer, 524);
 	delay(150);
 }
+
+void easter_egg() {
+  // 🥚
+}
+
 void loop() {
 	delay(250);
 	// Main game loop, calls all other functions and loops
+  // Easter egg!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+  if(easter_egg_check){
+    easter_egg();
+  }
 	// Gamemode switch
 	switch(gamemode){
 		case 0:
