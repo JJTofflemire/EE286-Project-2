@@ -803,14 +803,14 @@ void setup() {
 					break;
 			}
 			// After selection is confirmed, play start sequence/melody
-			freddy();
+			start_song();
 			// Reset led and buzzer states
 			reset();
 			break;
 		}
 	}
 }
-void freddy() {
+void start_song() {
 	// This is the start song
 	digitalWrite(Y_led, HIGH);
 	digitalWrite(B_led, HIGH);
