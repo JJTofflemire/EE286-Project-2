@@ -46,6 +46,7 @@ int gamemode = 99;
 const int difficulty = 10;
 // Melody variables for musical mode
 int melody;
+int start;
 
 void generate_sequence() {
 	// Add new random light to end of replay sequence
